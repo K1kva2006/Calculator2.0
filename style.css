@@ -1,5 +1,5 @@
 body {
-  background-color: palevioletred;
+  background-color: #ffb3b3;
 }
 .calculator-wrapper {
   position: absolute;
@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  background-color: rgb(255, 81, 81);
+  background-color: #b3c6ff;
   box-shadow: 0 6px 14px black;
   border: 2px solid rgb(255, 70, 70);
 }
