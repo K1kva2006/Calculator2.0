@@ -22,6 +22,7 @@ function disabledTrue() {
     gayofa.setAttribute("disabled", true);
     xarisxi.setAttribute("disabled", true);
     percent.setAttribute("disabled", true);
+    point.setAttribute("disabled", true)
 }
 
 function disabledFalse() {
@@ -31,12 +32,32 @@ function disabledFalse() {
     gayofa.removeAttribute("disabled");
     xarisxi.removeAttribute("disabled");
     point.removeAttribute("disabled");
-    percent.removeAttribute("disabled");
+    percent.removeAttribute("disabled");    
 }
 
 function firstInput() {
     if (input.value.length == 1) {
         disabledTrue();
+    }
+}
+
+function shedareba() {
+    if (input.value[input.value.length - 1] == "+") {
+        disabledTrue();
+    } else if (input.value[input.value.length - 1] == "-") {
+        disabledTrue();
+    } else if (input.value[input.value.length - 1] == "*") {
+        disabledTrue();
+    } else if (input.value[input.value.length - 1] == "/") {
+        disabledTrue();
+    } else if (input.value[input.value.length - 1] == "**") {
+        disabledTrue();
+    } else if (input.value[input.value.length - 1] == ".") {
+        disabledTrue();
+    } else if (input.value[input.value.length - 1] == "%") {
+        disabledTrue();
+    } else {
+        disabledFalse();
     }
 }
 
@@ -50,23 +71,7 @@ numbers.forEach((item) => {
 
         input.value += e.target.textContent;
 
-        if (input.value[input.value.length - 1] == "+") {
-            disabledTrue();
-        } else if (input.value[input.value.length - 1] == "-") {
-            disabledTrue();
-        } else if (input.value[input.value.length - 1] == "*") {
-            disabledTrue();
-        } else if (input.value[input.value.length - 1] == "/") {
-            disabledTrue();
-        } else if (input.value[input.value.length - 1] == "**") {
-            disabledTrue();
-        } else if (input.value[input.value.length - 1] == ".") {
-            disabledTrue();
-        } else if (input.value[input.value.length - 1] == "%") {
-            disabledTrue();
-        } else {
-            disabledFalse();
-        }
+        shedareba()
     });
 });
 
@@ -86,6 +91,7 @@ remove.addEventListener("click", () => {
         if(input.value[input.value.length - 1] = /0-9/) {
             disabledFalse()
         } 
+        shedareba()
     } else {
         input.value = "0";
     }
