@@ -22,6 +22,7 @@ function disabledTrue() {
     gayofa.setAttribute("disabled", true);
     xarisxi.setAttribute("disabled", true);
     percent.setAttribute("disabled", true);
+    point.setAttribute("disabled", true);
 }
 
 function disabledFalse() {
